@@ -21,6 +21,13 @@ export class AppService{
             .catch(this.handleError);
     }
 
+    getStoryDetail(id: number): Observable<any> {
+        let url = this.domain + '/api/article/get/' + id;
+        return this.http.get(url)
+            .map(this.extractData)
+            .catch(this.handleError);
+    }
+
     private extractData(res: Response) {
         if (res.status < 200 || res.status >= 300) {
             throw new Error('Response status: ' + res.status);

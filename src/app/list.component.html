@@ -1,8 +1,8 @@
 <div>
-    <h2>我是列表页面</h2>
+    <h2>{{title}}</h2>
     <ul>
-        <li><a href="/detail/1">列表内容</a></li>
-        <li><a href="/detail/1">列表内容</a></li>
-        <li><a href="/detail/1">列表内容</a></li>
+        <li *ngFor="let item of storyLists">
+            <a href="/detail/{{item.StoryId}}">{{item.Title}}</a>
+        </li>
     </ul>
 </div>

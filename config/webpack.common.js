@@ -32,6 +32,9 @@ module.exports = {
             test: /\.css$/,
             include: helpers.root('src', 'app'),
             loader: 'raw'
+        }, {
+            test: /\.less$/,
+            loader: ExtractTextPlugin.extract('css!less')
         }]
     },
 
