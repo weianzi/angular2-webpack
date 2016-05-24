@@ -6,6 +6,7 @@ import {
     ROUTER_PROVIDERS,
 } from '@angular/router-deprecated';
 import { HTTP_PROVIDERS } from '@angular/http';
+import { HomeComponent } from './home.component';
 import { ListComponent } from './list.component';
 import { DetailComponent } from './detail.component';
 
@@ -18,6 +19,12 @@ import { DetailComponent } from './detail.component';
 })
 
 @RouteConfig([
+    {
+        path: '/home',
+        name: 'Home',
+        component: HomeComponent,
+        useAsDefault: true
+    },
     {
         path: '/list',
         name: 'List',

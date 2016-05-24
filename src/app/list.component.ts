@@ -7,7 +7,7 @@ import { List } from '../common/list';
     selector: 'list',
     template: require('./list.component.html'),
     styles: [require('./list.component.css')],
-    providers:[AppService]
+    providers: [AppService]
 })
 
 export class ListComponent implements OnInit {
@@ -18,7 +18,6 @@ export class ListComponent implements OnInit {
     constructor(
         private appService: AppService,
         private router: Router){
-
     }
 
     ngOnInit(){
@@ -31,5 +30,9 @@ export class ListComponent implements OnInit {
                 response => this.storyLists = response.Data,
                 error => this.errorMessage = <any>error
             );
+    }
+
+    gotoDetail(id: number){
+        this.router.navigate(['Detail', { id }]);
     }
 }

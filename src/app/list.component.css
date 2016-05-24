@@ -1,0 +1,6 @@
+.list-view li{
+    cursor:pointer;
+}
+.list-view li:hover{
+    color:#ddd
+}

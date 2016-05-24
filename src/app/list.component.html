@@ -1,8 +1,8 @@
-<div>
+<div class="list-view">
     <h2>{{title}}</h2>
     <ul>
-        <li *ngFor="let item of storyLists">
-            <a href="/detail/{{item.StoryId}}">{{item.Title}}</a>
+        <li *ngFor="let item of storyLists" (click)="gotoDetail(item.StoryId)">
+            {{item.Title}}
         </li>
     </ul>
 </div>
